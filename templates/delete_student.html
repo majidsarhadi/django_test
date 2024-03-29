@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block maincontent %}
+   <h2>Confirm delete</h2>
+    <p>Are you delete record?</p>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="submit" value="delete"></input>
+            <a href="{% url 'show' %}">cancel</a>
+        </div>
+
+
+    </form>
+
+{% endblock maincontent %}

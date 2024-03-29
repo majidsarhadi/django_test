@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block maincontent %}
+    <form method="post" >
+    {% csrf_token %}
+        {{ form.as_p }}
+    </div>
+    <div>
+        <input type="submit" value="save">
+        <a href="{% url "show" %}">Show</a>
+    </div>
+    </form>
+{% endblock %}
